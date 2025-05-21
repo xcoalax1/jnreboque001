@@ -1,0 +1,207 @@
+#carouselSobre .carousel-item img {
+  height: 300px; /* ajuste conforme necessário */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #343a40 !important;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffc107 !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: white !important;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+#logo-bg {
+  width: 100%;
+  height: 300px;
+  background-image: url(imagem/logomarca.jpg);
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  background-size: contain;
+  background-color: white;
+}
+
+header.jumbotron {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#servicos {
+  padding: 2rem 1rem;
+  background-color: rgba(233, 236, 239, 0.9);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.telefone-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 8px;
+  transition: 0.3s ease;
+}
+
+.telefone-link:hover {
+  background-color: #0056b3;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.0rem;
+  }
+
+  header.jumbotron {
+    padding: 1rem;
+  }
+
+  .carousel-item img {
+    height: 140px;
+  }
+
+  .telefone-link {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  #logo-bg {
+    height: 220px;
+  }
+
+  #carouselSobre .carousel-item img {
+    height: 200px; /* Altura menor para tablets e celulares */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 120px;
+  }
+
+  #logo-bg {
+    height: 210px;
+  }
+
+  #carouselSobre .carousel-item img {
+    height: 150px; /* Altura ainda menor para celulares */
+  }
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whatsapp-flutuante {
+  background: #25d366;
+  color: white;
+  font-size: 2rem;
+  padding: 11px 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-flutuante:hover {
+  background: #1ebea5;
+}
+
+.whatsapp-texto {
+  background-color: white;
+  color: #25d366;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.whatsapp-container:hover .whatsapp-texto {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-container {
+    bottom: 15px;
+    right: 15px;
+  }
+  .whatsapp-texto {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-texto {
+    opacity: 0;
+  }
+  .whatsapp-container:hover .whatsapp-texto {
+    opacity: 1;
+  }
+}
